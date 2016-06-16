@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/welcome_parent_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_welcome_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/horizontal_divider_white"/>
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_selected_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pager_circle_selected"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:text="@string/skip"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:id="@+id/ll_indicator_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"/>
+
+            <ImageView
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_next"/>
+
+            <TextView
+                android:id="@+id/btn_done"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="end|center_vertical"
+                android:padding="20dp"
+                android:text="@string/done"
+                android:textColor="@android:color/white"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
