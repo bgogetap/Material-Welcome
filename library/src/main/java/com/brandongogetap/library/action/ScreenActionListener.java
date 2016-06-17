@@ -1,4 +1,4 @@
-package com.brandongogetap.library.base.action;
+package com.brandongogetap.library.action;
 
 import android.support.annotation.IntDef;
 

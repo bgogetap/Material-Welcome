@@ -1,9 +1,10 @@
 package com.brandongogetap.library.base;
 
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.view.ViewPager;
 
-import com.brandongogetap.library.base.action.ScreenActionListener;
+import com.brandongogetap.library.action.ScreenActionListener;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ class WelcomeScreenCoordinator implements ViewPager.OnPageChangeListener {
     ) {
         this.welcomeScreens = welcomeScreens;
         this.container = container;
-        this.screenActionListener = new ScreenActionListener(welcomeScreens);
+        this.screenActionListener = initScreenActionListener(welcomeScreens);
         this.context = context;
         container.updateBackgroundColor(
                 welcomeScreens.get(startingPosition).getBackgroundColor(context));
@@ -60,5 +61,15 @@ class WelcomeScreenCoordinator implements ViewPager.OnPageChangeListener {
             state = WelcomeState.MIDDLE;
         }
         container.updateWelcomeState(state);
+    }
+
+    // Allows for test subclasses to provide mocked implementation
+    protected ScreenActionListener initScreenActionListener(List<WelcomeScreen> welcomeScreens) {
+        return new ScreenActionListener(welcomeScreens);
+    }
+
+    @VisibleForTesting
+    ScreenActionListener getScreenActionListener() {
+        return screenActionListener;
     }
 }

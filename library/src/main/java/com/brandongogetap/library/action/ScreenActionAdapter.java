@@ -1,9 +1,9 @@
-package com.brandongogetap.library.base.action;
+package com.brandongogetap.library.action;
 
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.brandongogetap.library.base.action.ScreenActionListener.ScrollDirection;
+import com.brandongogetap.library.action.ScreenActionListener.ScrollDirection;
 
 /**
  * Convenience class to use when you do not need to override all {@link ScreenAction} methods.

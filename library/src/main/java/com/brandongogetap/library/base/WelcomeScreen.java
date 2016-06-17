@@ -11,7 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.util.SparseArrayCompat;
 import android.view.View;
 
-import com.brandongogetap.library.base.action.ScreenAction;
+import com.brandongogetap.library.action.ScreenAction;
 
 import java.lang.ref.WeakReference;
 

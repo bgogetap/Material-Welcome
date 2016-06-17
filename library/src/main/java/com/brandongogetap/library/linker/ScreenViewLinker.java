@@ -1,4 +1,4 @@
-package com.brandongogetap.library.base.linker;
+package com.brandongogetap.library.linker;
 
 import android.view.View;
 

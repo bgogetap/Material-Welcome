@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.brandongogetap.library.base.linker.ScreenViewLinker;
+import com.brandongogetap.library.linker.ScreenViewLinker;
 
 import java.util.List;
 

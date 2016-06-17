@@ -25,7 +25,7 @@ public class MyWelcomeActivity extends WelcomeActivity {
                 .backgroundColorResource(R.color.colorAccent)
                 .onViewClicked(R.id.btn_first, new View.OnClickListener() {
                     @Override public void onClick(View v) {
-                        Toast.makeText(MyWelcomeActivity.this, "First Clicked!", Toast.LENGTH_LONG)
+                        Toast.makeText(MyWelcomeActivity.this, "First Clicked!", Toast.LENGTH_SHORT)
                                 .show();
                     }
                 })
@@ -36,6 +36,12 @@ public class MyWelcomeActivity extends WelcomeActivity {
                 .build());
         screens.add(new WelcomeScreen.Builder(R.layout.welcome_screen_3)
                 .backgroundColorResource(R.color.colorAccent)
+                .onViewClicked(R.id.btn_third, new View.OnClickListener() {
+                    @Override public void onClick(View v) {
+                        Toast.makeText(MyWelcomeActivity.this, "Third Clicked!", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                })
                 .build());
 
         return screens;

@@ -4,8 +4,8 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;
 
-import com.brandongogetap.library.base.action.ScreenAction;
-import com.brandongogetap.library.base.action.ScreenActionListener.ScrollDirection;
+import com.brandongogetap.library.action.ScreenAction;
+import com.brandongogetap.library.action.ScreenActionListener.ScrollDirection;
 
 import java.math.BigDecimal;
 
